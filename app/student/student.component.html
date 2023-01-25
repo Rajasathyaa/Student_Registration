@@ -1,0 +1,36 @@
+<body>
+	<div class="background-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmfMQJKQQxlYZzTrrT22gWXxyuo7h6CzndDA&usqp=CAU'); border: rgb(245, 242, 242);">
+        <div class ="container">
+            <div style="text-decoration: black; font-family: 'Times New Roman', Times, serif;" class="text-center">
+	<h2>Student List</h2>
+    </div>
+</div>
+</div>
+</body>
+   
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Id</th>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Name</th>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Address</th>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Department</th>
+            <th class="text-left" style="font-family: 'Times New Roman', Times, serif;">Mobile_No</th>
+            <th>Actions</th>
+           </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let student of students">
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.id}}</td>
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.name}}</td>
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.address}}</td>
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.department}}</td>
+            <td class="text-left" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{student.mobile}}</td>
+            <td>
+                <button type="button" (click)="update(student.id)" class="btn btn-info">Update</button>
+                <button type="button" (click)="delete(student.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+       
+        </tr>
+    </tbody>
+</table>
